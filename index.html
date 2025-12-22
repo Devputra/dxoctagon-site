@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DXOCTAGON</title>
+    <meta
+      name="description"
+      content="DXOCTAGON — Research-led experimental development across natural science and engineering. Parent entity for Learnamyte and Appobang."
+    />
+    <meta name="theme-color" content="#0b0b0c" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Preload the hero logo for faster first paint -->
+    <link rel="preload" as="image" href="assets/dxoctagon-logo.png" />
+
+    <!-- Basic OG tags (optional but professional) -->
+    <meta property="og:title" content="DXOCTAGON" />
+    <meta
+      property="og:description"
+      content="Research-led experimental development across natural science and engineering."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <!-- Full-screen hero -->
+    <header class="hero" aria-label="DXOCTAGON hero">
+      <div class="hero-inner">
+        <img
+          class="hero-logo"
+          src="assets/dxoctagon-logo.png"
+          alt="DXOCTAGON"
+          loading="eager"
+        />
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span class="scroll-text">Scroll</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content appears after scroll -->
+    <main class="main" id="content">
+      <section class="section intro" aria-label="About DXOCTAGON">
+        <div class="container">
+          <h1 class="title">DXOCTAGON</h1>
+          <p class="subtitle">
+            Research-led experimental development across natural science and engineering.
+          </p>
+
+          <div class="grid-two">
+            <div class="card">
+              <h2 class="card-title">What it is</h2>
+              <p class="card-text">
+                DXOCTAGON is the parent platform that unifies multiple ventures under a single strategic
+                identity—focused on rigorous execution, engineering clarity, and repeatable innovation.
+              </p>
+            </div>
+
+            <div class="card">
+              <h2 class="card-title">What it does</h2>
+              <p class="card-text">
+                We design, build, and scale products across education technology, software development,
+                and applied engineering—leveraging strong systems thinking and an experimentation-first mindset.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ventures" aria-label="Ventures">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Ventures</h2>
+            <p class="section-note">
+              Active brands are linked. New initiatives are shown as “Coming soon”.
+            </p>
+          </div>
+
+          <div class="venture-grid">
+            <!-- Learnamyte (active) -->
+            <a class="venture-card" href="https://learnamyte.com" target="_blank" rel="noreferrer">
+            <div class="venture-top is-light">
+                <img
+                class="venture-logo"
+                src="assets/learnamyte-logo.png"
+                alt="Learnamyte logo"
+                loading="lazy"
+                />
+            </div>
+            <div class="venture-body">
+                <div class="venture-name">Learnamyte</div>
+                <div class="venture-desc">EdTech | Upskilling | Training</div>
+            </div>
+            <div class="venture-foot">
+                <span class="chip chip-live">Live</span>
+                <span class="arrow">↗</span>
+            </div>
+            </a>
+
+            <!-- Appobang (active) -->
+            <a class="venture-card" href="https://appobang.com" target="_blank" rel="noreferrer">
+            <div class="venture-top is-light">
+                <img
+                class="venture-logo"
+                src="assets/appobang-logo.png"
+                alt="Appobang logo"
+                loading="lazy"
+                />
+            </div>
+            <div class="venture-body">
+                <div class="venture-name">Appobang</div>
+                <div class="venture-desc">Software Development | Automation</div>
+            </div>
+            <div class="venture-foot">
+                <span class="chip chip-live">Live</span>
+                <span class="arrow">↗</span>
+            </div>
+            </a>
+
+            <!-- NickelnTungsten (coming soon) -->
+            <div class="venture-card coming-soon" role="group" aria-label="NickelnTungsten coming soon">
+              <div class="venture-top">
+                <!-- Optional logo. If you don't have it yet, keep it; the fallback block will still look fine. -->
+                <img
+                  class="venture-logo"
+                  src="assets/nickeln-tungsten-logo.png"
+                  alt="NickelnTungsten logo"
+                  loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');"
+                />
+                <div class="logo-fallback" aria-hidden="true">NT</div>
+              </div>
+              <div class="venture-body">
+                <div class="venture-name">NickelnTungsten</div>
+                <div class="venture-desc">IoT | Applied Engineering</div>
+              </div>
+              <div class="venture-foot">
+                <span class="chip chip-soon">Coming soon</span>
+              </div>
+            </div>
+
+            <!-- New Leaf (coming soon) -->
+            <div class="venture-card coming-soon" role="group" aria-label="New Leaf coming soon">
+              <div class="venture-top">
+                <img
+                  class="venture-logo"
+                  src="assets/new-leaf-logo.png"
+                  alt="New Leaf logo"
+                  loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');"
+                />
+                <div class="logo-fallback" aria-hidden="true">NL</div>
+              </div>
+              <div class="venture-body">
+                <div class="venture-name">New Leaf</div>
+                <div class="venture-desc">Venue Booking | Marketplace</div>
+              </div>
+              <div class="venture-foot">
+                <span class="chip chip-soon">Coming soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section footer" aria-label="Footer">
+        <div class="container footer-inner">
+          <div class="footer-left">
+            <div class="footer-brand">DXOCTAGON</div>
+            <div class="footer-muted">
+              Research-led experimental development across science and engineering.
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <a class="footer-link" href="#content">Back to content</a>
+            <span class="footer-dot">•</span>
+            <span class="footer-muted">© <span id="year"></span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
