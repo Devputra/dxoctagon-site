@@ -262,10 +262,10 @@ body {
 }
 
 .venture-logo {
-  max-height: 58px;
-  max-width: 86%;
-  width: auto;
-  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: 300px;
+  height: 150px;
   display: block;
 }
 
