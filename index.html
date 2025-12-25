@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Preload the hero logo for faster first paint -->
-    <link rel="preload" as="image" href="assets/dxoctagon-logo.png" />
+    <link rel="preload" as="image" href="assets/dxoctagon-text.svg" />
 
     <!-- Basic OG tags (optional but professional) -->
     <meta property="og:title" content="DXOCTAGON" />
@@ -31,7 +31,7 @@
       <div class="hero-inner">
         <img
           class="hero-logo"
-          src="assets/dxoctagon-logo.png"
+          src="assets/dxoctagon-text.svg"
           alt="DXOCTAGON"
           loading="eager"
         />
@@ -46,13 +46,13 @@
     <main class="main" id="content">
       <section class="section intro" aria-label="About DXOCTAGON">
         <div class="container">
-          <h1 class="title">DXOCTAGON</h1>
-          <p class="subtitle">
+          <h1 class="title reveal">DXOCTAGON</h1>
+          <p class="subtitle reveal">
             Research-led experimental development across natural science and engineering.
           </p>
 
           <div class="grid-two">
-            <div class="card">
+            <div class="card reveal">
               <h2 class="card-title">What it is</h2>
               <p class="card-text">
                 DXOCTAGON is the parent platform that unifies multiple ventures under a single strategic
@@ -60,7 +60,7 @@
               </p>
             </div>
 
-            <div class="card">
+            <div class="card reveal">
               <h2 class="card-title">What it does</h2>
               <p class="card-text">
                 We design, build, and scale products across education technology, software development,
@@ -73,7 +73,7 @@
 
       <section class="section ventures" aria-label="Ventures">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <h2 class="section-title">Ventures</h2>
             <p class="section-note">
               Active brands are linked. New initiatives are shown as “Coming soon”.
@@ -82,7 +82,7 @@
 
           <div class="venture-grid">
             <!-- Learnamyte (active) -->
-            <a class="venture-card" href="https://learnamyte.com" target="_blank" rel="noreferrer">
+            <a class="venture-card reveal" href="https://learnamyte.com" target="_blank" rel="noopener noreferrer">
             <div class="venture-top is-light">
                 <img
                 class="venture-logo"
@@ -102,7 +102,7 @@
             </a>
 
             <!-- Appobang (active) -->
-            <a class="venture-card" href="https://appobang.com" target="_blank" rel="noreferrer">
+            <a class="venture-card reveal" href="https://appobang.com" target="_blank" rel="noopener noreferrer">
             <div class="venture-top is-light">
                 <img
                 class="venture-logo"
@@ -122,7 +122,7 @@
             </a>
 
             <!-- NickelnTungsten (coming soon) -->
-            <div class="venture-card coming-soon" role="group" aria-label="NickelnTungsten coming soon">
+            <div class="venture-card coming-soon reveal" role="group" aria-label="NickelnTungsten coming soon">
               <div class="venture-top is-light">
                 <img
                   class="venture-logo"
@@ -142,7 +142,7 @@
             </div>
 
             <!-- New Leaf (coming soon) -->
-            <div class="venture-card coming-soon" role="group" aria-label="New Leaf coming soon">
+            <div class="venture-card coming-soon reveal" role="group" aria-label="New Leaf coming soon">
               <div class="venture-top is-light">
                 <img
                   class="venture-logo"
@@ -165,7 +165,7 @@
       </section>
 
       <section class="section footer" aria-label="Footer">
-        <div class="container footer-inner">
+        <div class="container footer-inner reveal">
           <div class="footer-left">
             <div class="footer-brand">DXOCTAGON</div>
             <div class="footer-muted">
@@ -185,6 +185,30 @@
     <script>
       // Footer year
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll reveal (IntersectionObserver)
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reducedMotion) {
+        const revealEls = document.querySelectorAll(".reveal");
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target); // reveal once
+              }
+            }
+          },
+          { threshold: 0.12 }
+        );
+
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        // If user prefers reduced motion, show everything immediately
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      }
     </script>
   </body>
 </html>
