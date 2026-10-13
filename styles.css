@@ -107,6 +107,7 @@ body {
   place-items: center;
   gap: 18px;
   width: 100%;
+  min-height: calc(100vh - 96px); /* full hero height, so the scroll hint sits at the bottom, not over the logo */
 }
 
 .hero-logo {
@@ -280,7 +281,8 @@ body {
   border-radius: var(--radius2);
   padding: 18px;
   transition:
-    transform 200ms ease,
+    opacity 700ms ease,
+    transform 300ms ease,
     border-color 300ms ease,
     box-shadow 300ms ease;
   display: grid;
