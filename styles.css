@@ -404,6 +404,15 @@ a.venture-card:focus-visible .arrow {
   line-height: 1.6;
 }
 
+.footer-company {
+  margin-top: 14px;
+  color: var(--muted2);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
 .footer-link {
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
